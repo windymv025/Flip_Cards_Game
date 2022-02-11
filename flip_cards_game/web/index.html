@@ -36,6 +36,21 @@
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyCpnR8ZsCSBwicqvpw2JdKjZDSrWLSAF9c",
+      authDomain: "job-fair-ee7d4.firebaseapp.com",
+      projectId: "job-fair-ee7d4",
+      storageBucket: "job-fair-ee7d4.appspot.com",
+      messagingSenderId: "859080156631",
+      appId: "1:859080156631:web:97d791d99900a9b05cd792",
+      measurementId: "G-1ZR0K39H1G"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
   <script>
     var serviceWorkerVersion = null;
     var scriptLoaded = false;

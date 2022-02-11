@@ -1,10 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flip_cards_game/provider/flip-game-provider.dart';
-import 'package:flip_cards_game/ui/screen/game-screen.dart';
+import 'package:flip_cards_game/ui/game-screen.dart';
 import 'package:flip_cards_game/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

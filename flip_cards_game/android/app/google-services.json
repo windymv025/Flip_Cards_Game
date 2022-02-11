@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "859080156631",
+    "project_id": "job-fair-ee7d4",
+    "storage_bucket": "job-fair-ee7d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859080156631:android:3b8666a367cdd1635cd792",
+        "android_client_info": {
+          "package_name": "com.example.flip_cards_game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859080156631-0729q6povisvkjhpckj0c3mnm5hvn2l5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKlMziq8X2qoenaMGSaX61vxY_VggWPvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859080156631-0729q6povisvkjhpckj0c3mnm5hvn2l5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
