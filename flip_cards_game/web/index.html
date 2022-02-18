@@ -37,10 +37,16 @@
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+  <!--Cloud Firestore-->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
   <script>
     var firebaseConfig = {
       apiKey: "AIzaSyCpnR8ZsCSBwicqvpw2JdKjZDSrWLSAF9c",
       authDomain: "job-fair-ee7d4.firebaseapp.com",
+      databaseURL: "https://job-fair-ee7d4-default-rtdb.firebaseio.com",
       projectId: "job-fair-ee7d4",
       storageBucket: "job-fair-ee7d4.appspot.com",
       messagingSenderId: "859080156631",
@@ -50,7 +56,10 @@
 
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    // firebase.database();
   </script>
+  
   <script>
     var serviceWorkerVersion = null;
     var scriptLoaded = false;

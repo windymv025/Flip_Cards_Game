@@ -1,0 +1,34 @@
+{
+	"prizes":{
+		"001":{
+			"prize_id": "1",
+			"prize_name": "Bàn phím",
+			"prize_image_url":"https://phucanhcdn.com/media/product/38963_meetion_k202_h3.png",
+			"quantity":10,
+			"rate": 10
+		},
+		"002":{
+			"prize_id": "HmOR1gpiOhqnONjNErtC",
+			"prize_name": "Chuột không dây",
+			"prize_image_url":"https://cdn.tgdd.vn/Products/Images/86/86801/chuot-khong-day-anitech-mw315-den-1-1-org.jpg",
+			"quantity":5,
+			"rate": 5
+		},
+		"003":{
+			"prize_id": "2",
+			"prize_name": "Bút bi",
+			"prize_image_url":"http://vanphongphamanhhong.com/wp-content/uploads/2015/11/Montex-HYSCALE-Copy.png",
+			"quantity":100,
+			"rate": 50
+		},
+		"004":{
+			"prize_id": "3",
+			"prize_name": "Chúc bạn may mắn lần sau",
+			"prize_image_url":"http://4.bp.blogspot.com/-58EX6F_8EvA/UwDVYrmOhrI/AAAAAAAAAq8/kqwcbqswm3g/w1200-h630-p-k-no-nu/nap-card.jpg",
+			"quantity":200,
+			"rate": 70
+		}
+	},
+	"students_number": 30,
+	"win_game_number": 0
+}

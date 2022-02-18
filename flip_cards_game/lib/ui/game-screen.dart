@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flip_cards_game/models/prize.dart';
 import 'package:flip_cards_game/provider/flip-game-provider.dart';
 import 'package:flutter/material.dart';
@@ -18,32 +19,30 @@ class _GameScreenState extends State<GameScreen> {
   @override
   Widget build(BuildContext context) {
     final flipGameProvider = Provider.of<FlipGameProvider>(context);
-    final provider = Provider.of<FlipGameProvider>(context);
-    return StreamBuilder<List<Prize>>(
-        stream: FirebaseFirestore.instance.collection('prizes').snapshots().map(
-            (snapshot) => snapshot.docs
-                .map((doc) => Prize.fromJson(doc.data()))
-                .toList()),
+
+    return StreamBuilder<DatabaseEvent>(
+        // stream: FirebaseFirestore.instance.collection('prizes').snapshots().map(
+        //     (snapshot) => snapshot.docs
+        //         .map((doc) => Prize.fromJson(doc.data()))
+        //         .toList()),
+        stream: FirebaseDatabase.instance.ref("prizes").onValue,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
               child: CircularProgressIndicator(),
             );
           }
-          provider.prizes = snapshot.data;
-          provider.loadPrizes();
+          flipGameProvider.prizes =
+              (snapshot.data?.snapshot.value as Map<dynamic, dynamic>)
+                  .values
+                  .toList()
+                  .map((e) => Prize.fromJsonObject(e))
+                  .toList();
+          flipGameProvider.loadPrizes();
 
           return Scaffold(
             appBar: AppBar(
               title: const Text('Flip Cards Game'),
-              actions: [
-                IconButton(
-                  icon: const Icon(Icons.replay_outlined),
-                  onPressed: () {
-                    flipGameProvider.reloadData();
-                  },
-                ),
-              ],
             ),
             body: FlipGameBody(
               prizeList: flipGameProvider.prizeList,
